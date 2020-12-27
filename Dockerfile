@@ -1,10 +1,10 @@
-# VERSION 0.6
+# VERSION 0.7
 # AUTHOR:         Olav Grønås Gjerde <olav@backupbay.com>
 # DESCRIPTION:    Image with MoinMoin wiki, uwsgi, nginx and self signed SSL
 # TO_BUILD:       docker build -t moinmoin .
 # TO_RUN:         docker run -d -p 80:80 -p 443:443 --name my_wiki moinmoin
 
-FROM debian:stretch-slim
+FROM debian:buster-slim
 MAINTAINER Olav Grønås Gjerde <olav@backupbay.com>
 
 # Set the version you want of MoinMoin
@@ -19,7 +19,8 @@ RUN apt-get update && apt-get install -qqy --no-install-recommends \
   nginx \
   uwsgi \
   uwsgi-plugin-python \
-  rsyslog
+  rsyslog \
+  busybox
 
 # Download MoinMoin
 RUN curl -OkL \
