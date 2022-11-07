@@ -8,8 +8,8 @@ FROM debian:buster-slim
 MAINTAINER Olav Grønås Gjerde <olav@backupbay.com>
 
 # Set the version you want of MoinMoin
-ENV MM_VERSION 1.9.10
-ENV MM_CSUM 6ae110a22a23bfa6dd5c149b8d66f7ad34976d5d
+ENV MM_VERSION 1.9.11
+ENV MM_CSUM 3eb13b4730bd97259a41c4cd500f8433778ff8cf
 
 # Install software
 RUN apt-get update && apt-get install -qqy --no-install-recommends \
